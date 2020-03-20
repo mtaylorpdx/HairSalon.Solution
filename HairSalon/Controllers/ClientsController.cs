@@ -15,5 +15,24 @@ namespace HairSalon.Controllers
     {
       _db = db;
     }
+
+    public ActionResult Index()
+    {
+      List<Client> model = _db.Clients.Include(clients = clients.Stylist).ToList();
+      return View(model);
+    }
+    [HttpPost]
+    public ActionResult Create(Client client)
+    {
+      _db.Clients.Add(client);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    public ActionResult Create()
+    {
+      ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "StylistName");
+      return View();
+    }
   }
 }
