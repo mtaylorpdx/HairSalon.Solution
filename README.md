@@ -32,6 +32,7 @@ CREATE TABLE `clients` (
 
 CREATE TABLE `stylists` (  
   `StylistId` int(11) NOT NULL AUTO_INCREMENT,  
+  `StylistName` varchar(255) DEFAULT NULL,  
   `Specialty` varchar(255) DEFAULT NULL,  
   PRIMARY KEY (`StylistId`)  
 )
