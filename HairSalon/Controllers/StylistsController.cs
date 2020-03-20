@@ -40,5 +40,11 @@ namespace HairSalon.Controllers
       thisStylist.Clients = _db.Clients.Where(clients => clients.StylistId == id).ToList();
       return View(thisStylist);
     }
+
+    public ActionResult Delete(int id)
+    {
+      var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      return View(thisStylist);
+    }
   }
 }
