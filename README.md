@@ -6,7 +6,7 @@
 
 ## Description
 
-_This application project is an exercise in C# using the MVC framework._
+_This application is an exercise in C# using the MVC framework. Using a database, the user can create a list of employees and their clients._
 
 ## Behavior Driven Development
 | Behavior | Input | Output |
@@ -17,6 +17,8 @@ _This application project is an exercise in C# using the MVC framework._
 | User adds a new client | click link, fill form | New client is added to list, by stylist |
 | Application displays list of input clients by stylist | click on stylist link | Client list is displayed |
 | Application displays client details | click on client link | Client details are displayed |
+| Application allows editing of client and stylist entries | click link | Entry information is edited |
+| Application allows removal of client and stylist entries | click link | Entry is removed from list |
 
 ## MySql
 
@@ -33,6 +35,7 @@ CREATE TABLE `clients` (
 CREATE TABLE `stylists` (  
   `StylistId` int(11) NOT NULL AUTO_INCREMENT,  
   `StylistName` varchar(255) DEFAULT NULL,  
+  `StylistPhone` varchar(255) DEFAULT NULL,  
   `Specialty` varchar(255) DEFAULT NULL,  
   PRIMARY KEY (`StylistId`)  
 )
@@ -53,10 +56,10 @@ Email [@Matt Taylor](mailto:me@email.com)
 
 * Git
 * C#
-* .NET Core
-* ASP.NET Razor
-* MySql
-* Entity Framework Core
+* .NET Core 2.2
+* ASP.NET Razor 2.2.0
+* MySql 2.2.0
+* Entity Framework Core 2.2.0
 
 ### License
 
