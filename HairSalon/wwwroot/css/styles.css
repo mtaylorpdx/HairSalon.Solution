@@ -2,3 +2,12 @@ body {
   background-color: #F5F5FF;
   text-align: center;
 }
+
+h1 {
+  font-family: 'Cinzel Decorative', cursive;
+  padding-top: 2%;
+}
+
+#splash {
+  padding: 2%;
+}

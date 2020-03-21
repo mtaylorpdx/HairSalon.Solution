@@ -5,12 +5,8 @@
 @using HairSalon.Models;
 @model List<HairSalon.Models.Stylist>;
 
-<h2>Your Stylists</h2>
+<h4>Current Index of Stylists:</h4>
 <hr>
-  @if (@Model.Stylists.Count == 0)
-  {
-    <p>No clients have been added.</p>
-  }
 
   @foreach (Stylist stylist in Model)
   {
@@ -18,4 +14,4 @@
     <hr>
   }
 
-<p>@Html.ActionLink("Add a new Stylist", "Create", "Stylists")</p>
+<p>@Html.ActionLink("Add a new Stylist", "Create", "Stylists") | @Html.ActionLink("Home", "Index", "Home")</p>
