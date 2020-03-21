@@ -21,25 +21,24 @@ _This application is an exercise in C# using the MVC framework. Using a database
 | Application allows removal of client and stylist entries | click link | Entry is removed from list |
 
 ## MySql
-
-CREATE DATABASE `matt_taylor`
-
+```
+CREATE DATABASE `matt_taylor`;
+USE `matt_taylor`;  
 CREATE TABLE `clients` (  
   `ClientId` int(11) NOT NULL AUTO_INCREMENT,  
   `ClientName` varchar(255) DEFAULT NULL,  
   `PhoneNumber` varchar(255) DEFAULT NULL,  
   `StylistId` int(11) DEFAULT NULL,  
   PRIMARY KEY (`ClientId`)  
-)
-
+);
 CREATE TABLE `stylists` (  
   `StylistId` int(11) NOT NULL AUTO_INCREMENT,  
   `StylistName` varchar(255) DEFAULT NULL,  
   `StylistPhone` varchar(255) DEFAULT NULL,  
   `Specialty` varchar(255) DEFAULT NULL,  
   PRIMARY KEY (`StylistId`)  
-)
-
+);
+```
 ## Setup/Installation Requirements
 
 * Open Terminal
