@@ -5,13 +5,16 @@
 @using HairSalon.Models;
 @model HairSalon.Models.Stylist;  
 
-<h2>Stylist Details</h2>
+<h3>Stylist Details</h3>
 <hr>
 
-<h3>@Html.DisplayNameFor(model => model.StylistName): @Html.DisplayFor(model => model.StylistName)
-@Html.DisplayNameFor(model => model.StylistPhone): @Html.DisplayFor(model => model.StylistPhone)</h3>
+<p>Name: @Html.DisplayFor(model => model.StylistName)
+<br>
+Phone: @Html.DisplayFor(model => model.StylistPhone)
+<br>
+Personal Specialty: @Html.DisplayFor(model => model.Specialty)</p>
+<hr>
 
-<ul>
   @if (@Model.Clients.Count == 0)
   {
     <p>No clients have been added.</p>
@@ -19,9 +22,8 @@
 
   @foreach (Client client in Model.Clients)
   {
-    <li>Name: @client.ClientName</li>
+    <p>Name: @client.ClientName</p>
   }
-</ul>
 
 <p>@Html.ActionLink("Add a client", "Create", "Clients")</p>
 <hr>

@@ -7,8 +7,8 @@
 <h2>Client info:</h2>
 <hr>
 
-  <h3>@Html.DisplayNameFor(model => model.ClientName): @Html.DisplayFor(model => model.ClientName)</h3>
-  <h3>@Html.DisplayNameFor(model => model.PhoneNumber): @Html.DisplayFor(model => model.PhoneNumber)</h3>
+  <p>Client Name: @Html.DisplayFor(model => model.ClientName)</p>
+  <p>Client Phone: @Html.DisplayFor(model => model.PhoneNumber)</p>
 
   <hr>
   <p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
